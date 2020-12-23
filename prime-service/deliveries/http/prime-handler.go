@@ -15,15 +15,15 @@ func InitHandler(e *echo.Echo) {
 }
 
 func handlePrime(c echo.Context) error {
-	n := c.Param("n")
+	ns := c.Param("n")
 	response := entities.Response{ErrorCode: 0, Message: "", Value: entities.ERROR_CODE_OK}
 
 	// adapter validation
-	if n == "" {
+	if ns == "" {
 		response.ErrorCode = entities.ERROR_CODE_EMPTY_INPUT
 		response.Message = "Empty number"
 	} else {
-		response = usecases.FindLargestPrimeUnder(n)
+		response = usecases.FindLargestPrimeUnder(ns)
 	}
 
 	return c.JSON(http.StatusOK, response)
