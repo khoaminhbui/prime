@@ -1,0 +1,15 @@
+version: "3"
+services:
+  prime-service:
+    stdin_open: true
+    tty: true
+    build: ../prime-service
+    entrypoint: ./scripts/docker-entrypoint.sh
+    ports:
+      - "8000:8000"
+  prime-web-client:
+    stdin_open: true
+    tty: true
+    build: ../prime-web-client
+    ports:
+      - "3000:8001"
