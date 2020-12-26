@@ -16,5 +16,5 @@ func TrialDivision(n int) int {
 		}
 	}
 
-	return 1
+	return 0
 }
