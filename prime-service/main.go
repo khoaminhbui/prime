@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/khoaminhbui/prime/prime-service/deliveries/http"
+	"github.com/khoaminhbui/prime/prime-service/adapters/http"
 
 	"github.com/labstack/echo"
 	"github.com/spf13/viper"
