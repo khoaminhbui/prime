@@ -1,5 +1,5 @@
 import {Fragment, useState} from 'react';
-import {PrimeUsecase} from '../../core/usecases/prime.usecase';
+import {PrimeUsecase} from '../../../core/usecases/prime.usecase';
 import './prime.css';
 
 function Prime() {
@@ -25,7 +25,7 @@ function Prime() {
     return (
         <Fragment>
             <div className="prime-text-container-shape prime-text-container-presentation">
-                <input type="text" value = {n === 0 || Number.isNaN(n) ? '' : n} onChange={handleNumberChanged} placeholder="Enter prime threshold" className="prime-text-shape prime-text-presentation"/>
+                <input type="text" value = {n === 0 || Number.isNaN(n) ? '' : n} onChange={handleNumberChanged} placeholder="Enter number" className="prime-text-shape prime-text-presentation"/>
             </div>
             <br/>
             <div>
