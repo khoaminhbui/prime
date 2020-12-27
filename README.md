@@ -30,10 +30,11 @@ This service provides calculation API:
 - `prime-web-client`:
 This service provides web UI:
 
-    - host: `http://localhost:3000`
-    - A textbox to enter N.
-    - A button to fire calculation command.
-    - A label to display the result prime number.
+    - link: `http://localhost:3000`
+    - To test prime number calculation, open the link and all necessary items come right on the home page:
+        - A textbox to enter N.
+        - A button to fire calculation command.
+        - A label to display the result.
 
 ## Algorithm
 This section explains the algorithms used as well as their mathematical background.
