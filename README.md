@@ -25,10 +25,10 @@ cd to the `dockers` folder and follow these commands:
 This service provides calculation API:
 
     - host: `http://localhost:8000`
-    - API to find the largest prime number less than a give natural number N: `/prime/{N}`
+    - API to find the largest prime number less than a given natural number N: `/prime/{N}`
 
 - `prime-web-client`:
-This service provides a web UI:
+This service provides web UI:
 
     - host: `http://localhost:3000`
     - A textbox to enter N.
