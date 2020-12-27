@@ -2,7 +2,8 @@
 This is a monorepo of prime project
 
 - [What's inside](#whats-inside)
-- [Start services](#Start-services)
+- [Handle services](#Handle-services)
+- [Access services](#Access-services)
 - [Algorithm](#Algorithm)
 
 
@@ -13,11 +14,26 @@ The repository contains all source code, and document of prime project.
 - `prime-service`: the `Golang` project provides calculation service.
 - `prime-web-client`: the `ReactJS + TypeScript` project provides web UI.
 
-## Start services
+## Handle services
 cd to the `dockers` folder and follow these commands:
 
 - `docker-compose up --build`: command to build dockers then start prime service & web client.
 - `docker-compose down`: command to stop service & remove docker stuff.
+
+## Access services
+- `prime-service`:
+This service provides calculation API:
+
+    - host: `http://localhost:8000`
+    - API to find the largest prime number less than a give natural number N: `/prime/{N}`
+
+- `prime-web-client`:
+This service provides a web UI:
+
+    - host: `http://localhost:3000`
+    - A textbox to enter N.
+    - A button to fire calculation command.
+    - A label to display the result prime number.
 
 ## Algorithm
 This section explains the algorithms used as well as their mathematical background.
