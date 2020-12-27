@@ -22,7 +22,7 @@ cd to the `dockers` folder and follow these comamnds:
 ## Algorithm
 This section explains the algorithms used as well as its mathematical background.
 
-- Trial Division: this algorithm provide a simple and effective method to find the largest prime number less than a given number N. 
+- Trial Division: this algorithm provide a simple and effective method to find the largest prime number less than a given number N.
     - Anatomy:
         - Loop through the numbers beginning at (N - 1) all the way to 2 (smallest prime number), and check if which one is prime.
         - For each candidate, check if it can be divided evenly by a number in range [2 - square root of N]. If not, the target number is prime.
