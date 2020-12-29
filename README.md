@@ -39,10 +39,16 @@ This service provides web UI:
 ## Algorithm
 This section explains the algorithms used as well as their mathematical background.
 
-- Trial Division: this algorithm provides a simple and effective method to find the largest prime number less than a given number N.
+Primality test can be categorized basically into 2 types: deterministic and probabilistic. Deterministic test provides result with absolute certainty but slow while probabilistic test run faster but with a trade off that potentially (though with very small probability) faslely identify composite number as prime.
+
+In this scope, we only consider deterministic primality test. Including `Trial Division` (the easiest one) and `Elliptic Curve Primality Proving` (one of the quickiest and widely used for general purpose test). 
+- `Trial Division`: this algorithm provides a simple and effective method to find the largest prime number less than a given number N.
     - Anatomy:
         - Loop through the numbers beginning at (N - 1) all the way to 2 (smallest prime number), and check if which one is prime.
-        - For each candidate, check if it can be divided evenly by a number in range [2 - square root of N]. If not, the target number is prime.
+        - For each candidate, perform a primality test by checking if it can be divided evenly by a number in range [2 - square root of N]. If not, the target number is prime.
     - Time complexity: UPDATING.
+    - Improvement: 
+        - Number theorem suggests that there is always a prime number in range [n/2, n], so the loop can stop at n/2 rather than 2.
+        - The candidates can be further filtered out by rules as only test number of type (2k + 1), (6k + 1, 5), (30k + 1, 7, 11, 13, 17, 19, 23, 29).
 
-- More effective algorithms: UPDATING.
+- `Elliptic Curve Primality Proving`: UPDATING.
