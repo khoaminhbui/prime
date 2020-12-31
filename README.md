@@ -49,9 +49,9 @@ In this scope, we only consider deterministic primality test. Including `Trial D
     - Time complexity: O(n * sqrt(n)).
     - Improvement: 
         - Number theorem suggests that there is always a prime number in range [n/2, n], so the loop can stop at n/2 rather than 2. (In fact, this is an observation that refects the nature of the algorithm and does not contribute to algorithm performance).
-        - The candidates can be further filtered out by rules as only test number of type (2k + 1), (6k + 1, 5), (30k + 1, 7, 11, 13, 17, 19, 23, 29).
-        - Instead of divide by all number in range [2, sqrt(N)], we can find a way to deal with the prime number in range only. But this is an open question, since we dont have those prime numbers at hand.
+        - The candidates can be further filtered out by rules as only test numbers of type (2k + 1) or (6k + 1, 5) or (30k + 1, 7, 11, 13, 17, 19, 23, 29).. This filter will reduce the calculation to about 1/3.
+        - Instead of dividing by all numbers in range [2, sqrt(N)], we can find a way to deal with the prime numbers in range only. But this is an open question, since we dont have those prime numbers at hand.
 
 - `Elliptic Curve Primality Proving`: 
     - It's too complicated and out of scope to discuss in details and implement this algorithm.
-    - We can also combine probabilistic method with deterministic method where the the probabilistic method can quickly filter out the composite number, then continue the deterministic method for the pseudoprime (number pass probabilistic test).
+    - We can also combine probabilistic method with deterministic method where probabilistic method can quickly filter out composite numbers, then continue applying deterministic method for the pseudoprime (number pass probabilistic test).
